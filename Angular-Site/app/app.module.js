@@ -4,7 +4,7 @@ debugger;
 var app = angular.module('angular-site', [
     'ui.router'
 ])
-.controller('NavCtrl', ['$scope', '$location', function($scope, $location) {
+.controller('navCtrl', ['$scope', '$location', function($scope, $location) {
     $scope.items = [
         { url: '/home', title: 'Home', navPage: 'home' },
         { url: '/profile', title: 'Profile', navPage: 'profile' },
