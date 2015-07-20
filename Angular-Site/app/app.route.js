@@ -3,7 +3,7 @@
 app.config(function($stateProvider, $urlRouterProvider){
 	$stateProvider
 		.state('home',{
-			url: "/home",
+			url: '/home',
 			templateUrl: "app/home/home.html"
 		})
 		.state('profile',{
@@ -13,9 +13,11 @@ app.config(function($stateProvider, $urlRouterProvider){
 		.state('messages',{
 			url: '/messages',
 			templateUrl: "app/messages/messages.html"
-		});
-	$urlRouterProvider.otherwise("Index/home");
-
-	
+		})
+	    .state('images', {
+	        url: '/images',
+	        templateUrl: "app/images/images.html"
+	    });
+	$urlRouterProvider.otherwise('/home');	
 });
 

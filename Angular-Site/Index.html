@@ -1,5 +1,5 @@
 <!doctype html>
-<html ng-app="angular-site" ng-controller="appController">
+<html ng-app="angular-site">
 <head>
     <title></title>
     <link rel="stylesheet" href="assets/bootstrap/dist/css/bootstrap.css" />
@@ -20,18 +20,10 @@
                 <button type="button" class="btn btn-default">Login</button>
                 <button type="button" class="btn btn-default">Register</button>
             </div>
-            <ul class="nav nav-tabs" id="myTab">
-                <li id="homeTab" role="presentation">
-                    <a ui-sref="home">Home</a>
-                </li>
-                <li id="profileTab" role="presentation">
-                    <a ui-sref="profile">Profile</a>
-                </li>
-                <li id="messagesTab" role="presentation">
-                    <a ui-sref="messages">Messages</a>
-                </li>
+            <ul ng-controller="NavCtrl" class="nav nav-tabs" >
+                <li ng-repeat="item in items" ng-class="{active: isActive(item)}"><a href="#{{item.path}}" ui-sref="{{item.navPage}}">{{item.title}}</a></li>
             </ul>
-
+            <!-- See more at: http://coder1.com/articles/angularjs-managing-active-nav-elements#sthash.KF3rySKT.dpuf -->
         </div>
         <div ui-view></div>
     </div>
