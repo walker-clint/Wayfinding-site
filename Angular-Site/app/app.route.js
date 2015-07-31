@@ -7,8 +7,8 @@ app.config(function($stateProvider, $urlRouterProvider){
 			templateUrl: "app/home/home.html"
 		})
 		.state('profile',{
-			url: '/profile',
-			templateUrl: "app/profile/profile.html"
+		    url: '/profile',
+		    templateUrl: "app/profile/profile.html"
 		})
 		.state('messages',{
 			url: '/messages',
@@ -17,7 +17,17 @@ app.config(function($stateProvider, $urlRouterProvider){
 	    .state('images', {
 	        url: '/images',
 	        templateUrl: "app/images/images.html"
-	    });
+	    })
+        .state('profile.summary', {
+            url: 'profile/summary',
+            templateUrl: "app/profile/summary/summary.html"
+        })
+        .state('profile.experience', {
+            url: 'profile/experience',
+            templateUrl: "app/profile/experience/experience.html"
+        })
+    ;
+
 	$urlRouterProvider.otherwise('/home');	
 });
 

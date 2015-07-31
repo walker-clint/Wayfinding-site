@@ -1,8 +1,30 @@
-<div class="row" ng-controller="homeController">
-	<div class="col-lg-6">
-		<h2>This is the profile page</h2>
-	</div>
-	<div class="col-lg-6">
-		<h1>{{count}}</h1>
-	</div>	
+<div class="panel" ng-controller="profileSideBarCtrl">
+    <div class="row">
+        <div class="col-lg-2">
+            <div class="panel panel-collapse">
+                <header>Outline</header>
+                <ul ng-controller="profileSideBarCtrl" class="nav nav-pills nav-stacked" >
+                    <li role="presentation" ng-repeat="profileItem in profileItems" ng-class="{active: isActiveProfile(profileItem)}">
+                        <a role="button" href="#{{profileItem.url}}" ui-sref="{{profileItem.navPage}}">{{profileItem.title}}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-10">
+            <div class="col-lg-12">
+                <div class="well well-lg">
+                    <div class="container">
+                        <img src="jenpic2.jpg" alt="Jennifer Walker" width="150" height="200" /> 
+                    </div>
+                    
+
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="well well-lg">
+                    <div ui-view></div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
