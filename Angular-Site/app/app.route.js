@@ -1,6 +1,7 @@
 'use strict';
 
-app.config(function($stateProvider, $urlRouterProvider){
+app.config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
+    $locationProvider.hashPrefix('!').html5Mode(true);
 	$stateProvider
 		.state('home',{
 			url: '/home',

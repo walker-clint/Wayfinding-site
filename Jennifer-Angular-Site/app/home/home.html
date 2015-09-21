@@ -1,0 +1,45 @@
+<div class="panel">
+    <div class="row" style="padding: 10px 10px 10px 10px" ng-controller="homeController">
+        <div class="col-lg-2">
+            <div class="well well-lg">
+                Stuff to select goes here
+                <table>
+                    <tr>
+                        <td>
+                            <a href="#">
+                                Item 1
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Item 2
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Item 3
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Item 4
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Item 5
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <button class="btn btn-lg btn-primary" ng-click="incrementCount()">Click</button>
+        </div>
+        <div class="col-lg-10">
+            <div class="well well-lg">
+                pages of data go here
+            </div>
+            <h1>{{count}}</h1>
+        </div>
+    </div>
+</div>

@@ -15,18 +15,21 @@
 <body>
     <div class="container">
         <div class="page-header">
-            <h3>Wayfinding Site</h3>
+            <h3>Clint Walker's Site test</h3>
             <div class="btn-group btn-group-xs pull-right" role="group" aria-label="...">
                 <button type="button" class="btn btn-default">Login</button>
                 <button type="button" class="btn btn-default">Register</button>
             </div>
             <ul ng-controller="navCtrl" class="nav nav-tabs">
-                <li ng-repeat="item in items" ng-class="{active: isActive(item)}"><a href="#{{item.path}}" ui-sref="{{item.navPage}}">{{item.title}}</a></li>
+                <li ng-repeat="item in items" ng-class="{active: isActive(item)}">
+                    <a href="#{{item.path}}" ui-sref="{{item.navPage}}">
+                        {{item.title}}
+                    </a>
+                </li>
             </ul>
             <div ui-view></div> 
             <!-- See more at: http://coder1.com/articles/angularjs-managing-active-nav-elements#sthash.KF3rySKT.dpuf -->
-        </div>
-        
+        </div>        
     </div>
 </body>
 </html>

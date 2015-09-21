@@ -1,0 +1,27 @@
+{
+  "name": "Angular-Site",
+  "version": "0.0.0",
+  "homepage": "https://github.com/walker-clint/Wayfinding-site",
+  "authors": [
+    "Clinton Walker <walker.clint@icloud.com>"
+  ],
+  "main": "Index.html",
+  "keywords": [
+    "Angular",
+    "site"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.3",
+    "bootstrap": "~3.3.5",
+    "angular-ui-router": "~0.2.15"
+  }
+}

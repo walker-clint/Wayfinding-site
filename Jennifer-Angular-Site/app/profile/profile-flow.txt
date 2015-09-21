@@ -1,0 +1,3 @@
+when the Profile tab is selected:
+1: the profile tab is made active
+2: the profile page is loaded
